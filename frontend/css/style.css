@@ -1,0 +1,369 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial;
+}
+
+body{
+    background:#fffaf5;
+}
+
+/* NAVBAR */
+
+nav{
+    width:100%;
+    height:80px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:0 80px;
+
+    background:white;
+
+    box-shadow:0 2px 10px rgba(0,0,0,0.1);
+
+    position:sticky;
+    top:0;
+}
+
+.logo{
+    font-size:28px;
+    font-weight:bold;
+    color:#8b4513;
+}
+
+nav ul{
+    display:flex;
+    gap:30px;
+    list-style:none;
+}
+
+nav ul li{
+    cursor:pointer;
+    font-weight:bold;
+}
+
+/* HERO */
+
+.hero{
+    height:90vh;
+
+    display:flex;
+    align-items:center;
+
+    padding:0 80px;
+
+    background:
+    linear-gradient(
+        rgba(0,0,0,0.4),
+        rgba(0,0,0,0.4)
+    ),
+    url('https://images.unsplash.com/photo-1509440159596-0249088772ff?q=80&w=1972&auto=format&fit=crop');
+
+    background-size:cover;
+    background-position:center;
+
+    color:white;
+}
+
+.hero-text{
+    max-width:600px;
+}
+
+.hero h1{
+    font-size:70px;
+    margin-bottom:20px;
+}
+
+.hero p{
+    font-size:20px;
+    line-height:1.6;
+    margin-bottom:30px;
+}
+
+.hero button{
+    padding:15px 35px;
+
+    border:none;
+
+    background:#8b4513;
+
+    color:white;
+
+    font-size:18px;
+
+    border-radius:10px;
+
+    cursor:pointer;
+}
+
+/* PRODUCTS */
+
+.products{
+    padding:80px;
+}
+
+.products h2{
+    font-size:40px;
+    margin-bottom:40px;
+    color:#8b4513;
+}
+
+#product-list{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(300px,1fr));
+
+    gap:30px;
+}
+
+/* CARD */
+
+.card{
+
+    background:white;
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+}
+
+.card img{
+    width:100%;
+    height:250px;
+    object-fit:cover;
+}
+
+.card-body{
+    padding:20px;
+}
+
+.card-body h3{
+    margin-bottom:10px;
+}
+
+.card-body p{
+    color:#666;
+    margin-bottom:20px;
+}
+
+.price{
+    font-size:22px;
+    font-weight:bold;
+    color:#8b4513;
+    margin-bottom:20px;
+}
+
+.card button{
+
+    width:100%;
+
+    padding:14px;
+
+    border:none;
+
+    background:#8b4513;
+
+    color:white;
+
+    border-radius:10px;
+
+    cursor:pointer;
+
+    font-size:16px;
+}
+
+.detail-container{
+
+    padding:80px;
+}
+
+.detail-card{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:50px;
+
+    background:white;
+
+    padding:40px;
+
+    border-radius:20px;
+
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+.detail-card img{
+
+    width:100%;
+
+    height:500px;
+
+    object-fit:cover;
+
+    border-radius:20px;
+}
+
+.detail-info h1{
+
+    font-size:50px;
+
+    margin-bottom:20px;
+}
+
+.detail-info p{
+
+    margin-bottom:20px;
+
+    color:#666;
+
+    line-height:1.6;
+}
+
+.qty-box{
+
+    display:flex;
+
+    gap:20px;
+
+    align-items:center;
+}
+
+.qty-box button{
+
+    width:50px;
+    height:50px;
+
+    border:none;
+
+    background:#8b4513;
+
+    color:white;
+
+    font-size:20px;
+
+    border-radius:10px;
+
+    cursor:pointer;
+}
+
+.checkout-btn{
+
+    padding:18px 30px;
+
+    border:none;
+
+    background:#8b4513;
+
+    color:white;
+
+    border-radius:10px;
+
+    cursor:pointer;
+
+    font-size:18px;
+}
+
+.checkout-form{
+
+    margin-top:50px;
+
+    background:white;
+
+    padding:40px;
+
+    border-radius:20px;
+
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+.checkout-btn{
+
+    width:100%;
+
+    padding:18px;
+
+    border:none;
+
+    background:#8b4513;
+
+    color:white;
+
+    border-radius:10px;
+
+    font-size:18px;
+
+    cursor:pointer;
+
+    font-weight:bold;
+}
+
+.checkout-btn:hover{
+
+    opacity:0.9;
+}
+
+.table-container{
+
+    overflow-x:auto;
+
+    background:white;
+
+    border-radius:20px;
+
+    padding:20px;
+
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+table{
+
+    width:100%;
+
+    border-collapse:collapse;
+}
+
+table th{
+
+    background:#8b4513;
+
+    color:white;
+
+    padding:15px;
+
+    text-align:left;
+}
+
+table td{
+
+    padding:15px;
+
+    border-bottom:1px solid #ddd;
+}
+
+table tr:hover{
+
+    background:#f5f5f5;
+}
+
+table select{
+
+    padding:10px;
+
+    border-radius:10px;
+}

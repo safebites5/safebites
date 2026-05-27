@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+    content="width=device-width, initial-scale=1.0">
+
+    <title>Keranjang - SAFEBITES</title>
+
+    <link rel="stylesheet"
+    href="./css/cart.css">
+
+    <!-- GOOGLE FONT -->
+    <link rel="preconnect"
+    href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header class="header">
+
+    <div class="logo">
+
+        <img 
+            src="./asset/images/Safebites.jpg" 
+            alt="Logo"
+        >
+
+        <h2>SAFEBITES</h2>
+
+    </div>
+
+    <nav class="navbar">
+
+        <a href="index.html">
+            Beranda
+        </a>
+
+        <a href="menu.html">
+            Menu
+        </a>
+
+        <a href="tentang.html">
+            Tentang Kami
+        </a>
+
+        <a href="kontak.html">
+            Kontak Kami
+        </a>
+
+    </nav>
+
+</header>
+
+<!-- PAYMENT SECTION -->
+<section class="payment-section">
+
+    <!-- LEFT -->
+    <div class="payment-left">
+
+        <h1 class="payment-title">
+            Keranjang Belanja
+        </h1>
+
+        <!-- FORM -->
+        <div class="form-container">
+
+            <h2 class="form-header">
+                Data Customer
+            </h2>
+
+            <!-- ROW -->
+            <div class="input-row">
+
+                <div class="input-group">
+
+                    <label>
+                        Nama Lengkap
+                    </label>
+
+                    <input
+                        type="text"
+                        id="customer_name"
+                        placeholder="Masukkan nama lengkap"
+                    >
+
+                </div>
+
+                <div class="input-group">
+
+                    <label>
+                        Nomor Telepon
+                    </label>
+
+                    <input
+                        type="text"
+                        id="phone"
+                        placeholder="Masukkan nomor telepon"
+                    >
+
+                </div>
+
+            </div>
+
+            <!-- FULL -->
+            <div class="input-group full">
+
+                <label>
+                    Kota
+                </label>
+
+                <input
+                    type="text"
+                    id="city"
+                    placeholder="Masukkan kota"
+                >
+
+            </div>
+
+            <!-- FULL -->
+            <div class="input-group full">
+
+                <label>
+                    Alamat Lengkap
+                </label>
+
+                <textarea
+                    id="address"
+                    placeholder="Masukkan alamat lengkap"
+                ></textarea>
+
+            </div>
+
+        </div>
+
+        <!-- PAYMENT METHOD -->
+        <div class="method-container">
+
+            <h2 class="form-header">
+                Metode Pembayaran
+            </h2>
+
+            <div class="payment-method">
+
+                <div class="method-left">
+
+                    <input 
+                        type="radio"
+                        checked
+                    >
+
+                    <div>
+
+                        <h3>
+                            Midtrans Payment
+                        </h3>
+
+                        <p>
+                            Bayar menggunakan transfer,
+                            e-wallet, QRIS, dan lainnya.
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <img 
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Midtrans_logo.svg/2560px-Midtrans_logo.svg.png"
+                    alt="Midtrans"
+                >
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- RIGHT -->
+    <div class="payment-right">
+
+        <h2>
+            Rincian Pesanan
+        </h2>
+
+        <!-- PRODUCT LIST -->
+        <div id="cart-list">
+
+        </div>
+
+        <!-- TOTAL -->
+        <div class="total-box">
+
+            <p>
+                Total
+            </p>
+
+            <h3 id="total">
+                Rp 0
+            </h3>
+
+        </div>
+
+        <!-- DELIVERY -->
+        <div class="delivery-box">
+
+            <p class="delivery-title">
+                🚚 Estimasi Pengiriman : 2 - 3 Hari
+            </p>
+
+            <p class="delivery-text">
+                Pesanan akan diproses
+                setelah pembayaran berhasil.
+            </p>
+
+        </div>
+
+        <!-- BUTTON -->
+        <button
+            onclick="checkout()"
+            class="pay-btn"
+        >
+
+            Bayar Sekarang →
+
+        </button>
+
+    </div>
+
+</section>
+
+<!-- MIDTRANS -->
+<script
+type="text/javascript"
+src="https://app.sandbox.midtrans.com/snap/snap.js"
+data-client-key="Mid-client-F40oHj0x1jdoXW2n">
+</script>
+
+<!-- CART JS -->
+<script src="./js/cart.js"></script>
+
+</body>
+</html>

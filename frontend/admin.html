@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+    content="width=device-width, initial-scale=1.0">
+
+    <title>Admin Dashboard - SAFEBITES</title>
+
+    <!-- GOOGLE FONT -->
+
+    <link rel="preconnect"
+    href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+
+    <!-- CSS -->
+
+    <link rel="stylesheet"
+    href="./css/admin.css">
+
+</head>
+
+<body>
+
+<!-- =========================
+     NAVBAR
+========================= -->
+
+<nav class="navbar">
+
+    <!-- LOGO -->
+
+    <div class="logo">
+
+        <div class="logo-circle">
+
+            SB
+
+        </div>
+
+        <div class="logo-text">
+
+            <h2>
+                SAFEBITES
+            </h2>
+
+            <span>
+                ADMIN PANEL
+            </span>
+
+        </div>
+
+    </div>
+
+    <!-- NAVIGATION -->
+
+    <div class="nav-menu">
+
+        <a href="#dashboard"
+        class="active">
+
+            Dashboard
+
+        </a>
+
+        <a href="#products">
+
+            Produk
+
+        </a>
+
+        <a href="#orders">
+
+            Orders
+
+        </a>
+
+    </div>
+
+    <!-- BUTTON -->
+
+    <div class="nav-right">
+
+        <a href="menu.html">
+
+            <button class="back-btn">
+
+                ← Kembali ke Website
+
+            </button>
+
+        </a>
+
+    </div>
+
+</nav>
+
+<!-- =========================
+     DASHBOARD
+========================= -->
+
+<section class="dashboard"
+id="dashboard">
+
+    <!-- HEADER -->
+
+    <div class="dashboard-header">
+
+        <div>
+
+            <p class="dashboard-subtitle">
+
+                Welcome Back Admin 👋
+
+            </p>
+
+            <h1>
+
+                Dashboard SAFEBITES
+
+            </h1>
+
+        </div>
+
+        <button class="add-product-btn">
+
+            + Tambah Produk Baru
+
+        </button>
+
+    </div>
+
+    <!-- SUMMARY -->
+
+    <div class="summary-container">
+
+        <!-- CARD -->
+
+        <div class="summary-card">
+
+            <div class="summary-icon">
+
+                📦
+
+            </div>
+
+            <div class="summary-text">
+
+                <p>
+                    Total Produk
+                </p>
+
+                <h2 id="total-products">
+
+                    0
+
+                </h2>
+
+            </div>
+
+        </div>
+
+        <!-- CARD -->
+
+        <div class="summary-card">
+
+            <div class="summary-icon">
+
+                🛒
+
+            </div>
+
+            <div class="summary-text">
+
+                <p>
+                    Total Order
+                </p>
+
+                <h2 id="total-order">
+
+                    0
+
+                </h2>
+
+            </div>
+
+        </div>
+
+        <!-- CARD -->
+
+        <div class="summary-card">
+
+            <div class="summary-icon">
+
+                💰
+
+            </div>
+
+            <div class="summary-text">
+
+                <p>
+                    Total Revenue
+                </p>
+
+                <h2 id="total-revenue">
+
+                    Rp 0
+
+                </h2>
+
+            </div>
+
+        </div>
+
+        <!-- CARD -->
+
+        <div class="summary-card">
+
+            <div class="summary-icon">
+
+                ⏳
+
+            </div>
+
+            <div class="summary-text">
+
+                <p>
+                    Preorder Aktif
+                </p>
+
+                <h2 id="preorder-active">
+
+                    0
+
+                </h2>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =========================
+     PRODUCT SECTION
+========================= -->
+
+<section class="product-section"
+id="products">
+
+    <!-- TITLE -->
+
+    <div class="section-header">
+
+        <div>
+
+            <p class="section-subtitle">
+
+                Product Management
+
+            </p>
+
+            <h2>
+
+                Kelola Produk
+
+            </h2>
+
+        </div>
+
+    </div>
+
+    <!-- FORM -->
+
+    <div class="admin-form">
+
+        <div class="form-header">
+
+            <h3>
+
+                Tambah / Edit Produk
+
+            </h3>
+
+            <p>
+
+                Tambahkan produk preorder baru untuk customer
+
+            </p>
+
+        </div>
+
+        <!-- FORM GRID -->
+
+        <div class="form-grid">
+
+            <!-- INPUT -->
+
+            <div class="input-group">
+
+                <label>
+
+                    Nama Produk
+
+                </label>
+
+                <input
+                type="text"
+                id="name"
+                placeholder="Masukkan nama roti">
+
+            </div>
+
+            <!-- INPUT -->
+
+            <div class="input-group">
+
+                <label>
+
+                    Harga
+
+                </label>
+
+                <input
+                type="number"
+                id="price"
+                placeholder="Masukkan harga">
+
+            </div>
+
+            <!-- INPUT -->
+
+            <div class="input-group">
+
+                <label>
+
+                    Limit Preorder
+
+                </label>
+
+                <input
+                type="number"
+                id="preorder_limit"
+                placeholder="Masukkan limit">
+
+            </div>
+
+            <!-- INPUT -->
+
+            <div class="input-group">
+
+                <label>
+
+                    Kategori
+
+                </label>
+
+                <input
+                type="text"
+                id="category"
+                placeholder="Croissant / Sweet Bread">
+
+            </div>
+
+            <!-- INPUT -->
+
+            <div class="input-group full-width">
+
+                <label>
+
+                    Upload Gambar
+
+                </label>
+
+                <input
+                type="file"
+                id="image">
+
+            </div>
+
+            <!-- INPUT -->
+
+            <div class="input-group full-width">
+
+                <label>
+
+                    Deskripsi Produk
+
+                </label>
+
+                <textarea
+                id="description"
+                placeholder="Masukkan deskripsi produk"></textarea>
+
+            </div>
+
+        </div>
+
+        <!-- BUTTON -->
+
+        <button
+        class="submit-btn"
+        onclick="addProduct()">
+
+            Simpan Produk
+
+        </button>
+
+    </div>
+
+    <!-- PRODUCT LIST -->
+
+    <div class="product-list-header">
+
+        <h2>
+
+            Daftar Produk
+
+        </h2>
+
+        <input
+        type="text"
+        placeholder="Cari produk..."
+        class="search-box">
+
+    </div>
+
+    <!-- PRODUCT GRID -->
+
+    <div id="product-list"
+    class="product-grid">
+
+        <!-- PRODUCT CARD -->
+
+        <div class="product-card">
+
+            <div class="product-image">
+
+                <img
+                src="https://images.unsplash.com/photo-1509440159596-0249088772ff?q=80&w=1200&auto=format&fit=crop"
+                alt="bread">
+
+                <span class="product-badge">
+
+                    Bestseller
+
+                </span>
+
+            </div>
+
+            <div class="product-body">
+
+                <div class="product-top">
+
+                    <h3>
+
+                        Butter Croissant
+
+                    </h3>
+
+                    <span class="category">
+
+                        Pastry
+
+                    </span>
+
+                </div>
+
+                <p class="product-description">
+
+                    Croissant premium dengan butter berkualitas tinggi dan tekstur flaky.
+
+                </p>
+
+                <div class="product-bottom">
+
+                    <h2>
+
+                        Rp 45.000
+
+                    </h2>
+
+                    <span>
+
+                        Limit: 50
+
+                    </span>
+
+                </div>
+
+                <div class="product-actions">
+
+                    <button class="edit-btn">
+
+                        Edit
+
+                    </button>
+
+                    <button class="delete-btn">
+
+                        Hapus
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =========================
+     ORDER SECTION
+========================= -->
+
+<section class="order-section"
+id="orders">
+
+    <!-- HEADER -->
+
+    <div class="section-header">
+
+        <div>
+
+            <p class="section-subtitle">
+
+                Customer Orders
+
+            </p>
+
+            <h2>
+
+                Daftar Order
+
+            </h2>
+
+        </div>
+
+    </div>
+
+    <!-- ORDER TABLE -->
+
+    <div class="order-table-container">
+
+        <table class="order-table">
+
+            <thead>
+
+                <tr>
+
+                    <th>
+                        Order ID
+                    </th>
+
+                    <th>
+                        Customer
+                    </th>
+
+                    <th>
+                        Produk
+                    </th>
+
+                    <th>
+                        Total
+                    </th>
+
+                    <th>
+                        Status
+                    </th>
+
+                    <th>
+                        Action
+                    </th>
+
+                </tr>
+
+            </thead>
+
+            <tbody id="order-list">
+
+                <!-- ROW -->
+
+                <tr>
+
+                    <td>
+
+                        #SB1024
+
+                    </td>
+
+                    <td>
+
+                        Michael
+
+                    </td>
+
+                    <td>
+
+                        Croissant x2
+
+                    </td>
+
+                    <td>
+
+                        Rp 90.000
+
+                    </td>
+
+                    <td>
+
+                        <span class="status pending">
+
+                            Pending
+
+                        </span>
+
+                    </td>
+
+                    <td>
+
+                        <button class="detail-btn">
+
+                            Detail
+
+                        </button>
+
+                    </td>
+
+                </tr>
+
+                <!-- ROW -->
+
+                <tr>
+
+                    <td>
+
+                        #SB1025
+
+                    </td>
+
+                    <td>
+
+                        Sarah
+
+                    </td>
+
+                    <td>
+
+                        Matcha Bread x1
+
+                    </td>
+
+                    <td>
+
+                        Rp 55.000
+
+                    </td>
+
+                    <td>
+
+                        <span class="status success">
+
+                            Paid
+
+                        </span>
+
+                    </td>
+
+                    <td>
+
+                        <button class="detail-btn">
+
+                            Detail
+
+                        </button>
+
+                    </td>
+
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</section>
+
+<!-- =========================
+     SCRIPT
+========================= -->
+
+<script src="./js/admin.js"></script>
+
+</body>
+</html>
